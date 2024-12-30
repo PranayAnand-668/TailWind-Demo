@@ -2,13 +2,13 @@ import './App.css'
 import Register from './components/register'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Login from "./components/Login";
+import Login from "./components/login";
 import Welcome from './components/Welcome';
 
 function App() {
  
   return (
-    <Router>
+    <Router basename='/TailWind-Demo'>
       <div>
         <Routes>
           <Route path="/" element={<Navigate to="/register" />} />
