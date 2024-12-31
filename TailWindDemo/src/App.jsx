@@ -8,7 +8,7 @@ import Welcome from './components/Welcome';
 function App() {
  
   return (
-    <Router basename='/TailWind-Demo'>
+    <Router >
       <div>
         <Routes>
           <Route path="/" element={<Navigate to="/register" />} />
