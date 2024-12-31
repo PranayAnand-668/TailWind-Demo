@@ -4,6 +4,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./components/login";
 import Welcome from './components/Welcome';
+import ResetPass from './components/ResetPass';
 
 function App() {
  
@@ -15,6 +16,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/welcome" element={<Welcome/>}/>
+          <Route path="/resetPass" element={<ResetPass/>}/>
         </Routes>
       </div>
     </Router>

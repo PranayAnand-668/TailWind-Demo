@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { logout, selectIsAuthenticated } from "../userSlice";
+import { IoChevronBackCircleOutline } from "react-icons/io5";
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -22,6 +23,12 @@ const Welcome = () => {
   };
 
   return (
+    <>
+        <header className="flex justify-between p-4 mt-4 items-center lg:hidden">
+          <IoChevronBackCircleOutline className="text-5xl" onClick={handleLogout}/>
+          <h1 className="text-3xl font-bold">Welcome</h1>
+          <span></span>
+        </header>
     <div className="flex flex-col lg:justify-center">
       <h1 className="text-black lg:text-green-500 m-auto mt-[50px] lg:mb-[25px]">Welcome</h1>
       <button
@@ -30,7 +37,7 @@ const Welcome = () => {
       >
         Log Out
       </button>
-    </div>
+    </div></>
   );
 };
 
